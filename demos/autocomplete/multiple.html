@@ -64,6 +64,9 @@
 				terms.push( "" );
 				this.value = terms.join( ", " );
 				return false;
+			},
+			close: function( event ) {
+				if ( event ) { event.preventDefault(); }
 			}
 		});
 	});
