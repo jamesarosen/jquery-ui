@@ -180,7 +180,9 @@ $.widget( "ui.autocomplete", {
 						}, 1);
 					}
 
-					if ( false !== self._trigger( "select", event, { item: item } ) ) {
+					if ( false === self._trigger( "select", event, { item: item } ) ) {
+						event.preventDefault();
+					} else {
 						self.element.val( item.value );
 					}
 					// reset the term after the select event
