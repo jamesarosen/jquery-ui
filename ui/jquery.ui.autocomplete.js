@@ -345,8 +345,9 @@ $.widget( "ui.autocomplete", {
 
 	_resizeMenu: function() {
 		var ul = this.menu.element;
+		ul.width( "" );
 		ul.outerWidth( Math.max(
-			ul.width( "" ).outerWidth(),
+			ul.outerWidth(),
 			this.element.outerWidth()
 		) );
 	},
