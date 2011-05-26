@@ -13,8 +13,9 @@
 	<script type="text/javascript">
 		$.widget( "ui.iosMenu", {
 			options: {
-				backText:			 'Back',
-				slideDuration: 400
+				backText:      'Back',
+				slideDuration: 400,
+				slideEasing:   'linear'
 			},
 
 			_insertBackButtons: function() {
@@ -82,7 +83,7 @@
 							.attr( 'aria-expanded', 'false' )
 							.animate({
 								left: self.element.css( 'width' )
-							}, self.options.slideDuration, null, function() {
+							}, iosMenu.options.slideDuration, iosMenu.options.slideEasing, function() {
 								parent.hide();
 								self.focus( event, newItem );
 							})
@@ -100,7 +101,7 @@
 					menuOpenWithoutSliding.call( this, submenu );
 					submenu.animate({
 						left: 0
-					}, iosMenu.options.slideDuration);
+					}, iosMenu.options.slideDuration, iosMenu.options.slideEasing);
 				};
 
 				// Override menu#_startOpening so that hovering doesn't
