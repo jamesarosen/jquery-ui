@@ -128,10 +128,13 @@
 		});
 	</script>
 	<style>
-		.ios-style, .ios-style ul { background: #fff; height: 200px; padding: 2px; width: 260px; }
-		.ios-style { overflow: hidden; }
+		.ios-style, .ios-style ul, .ios-style ol { background: #fff; height: 200px; padding: 2px; width: 260px; }
+		.ios-style { overflow-x: hidden; overflow-y: auto; }
+		.ios-style::-webkit-scrollbar { width: 5px; height: 5px; }
+		.ios-style::-webkit-scrollbar-thumb { background: rgba(128, 128, 128, 0.6); border-radius: 4px; }
+		.ios-style ul, .ios-style ol { overflow-y: visible; border: none; }
 		.ios-style.ui-menu-icons .ui-menu-item a { position: inherit; }
-		.ios-style .ui-menu-item a { cursor: pointer; }
+		.ios-style .ui-menu-item a { cursor: pointer; outline: none; }
 	</style>
 </head>
 <body>
@@ -164,9 +167,14 @@
 			<a>Sides</a>
 			<ul>
 				<li><a>Seasonal fruit</a></li>
+				<li><a>Yogurt w/ fruit</a></li>
 				<li><a>Sausages</a></li>
 				<li><a>Bacon</a></li>
 				<li><a>English muffin</a></li>
+				<li><a>Croissant</a></li>
+				<li><a>Bagel</a></li>
+				<li><a>Bagel w/ cream cheese</a></li>
+				<li><a>Toast</a></li>
 				<li><a>Home fries</a></li>
 			</ul>
 		</li>
