@@ -116,10 +116,14 @@
 		});
 
 		$(function() {
-			$( '#breakfast-menu' )
+			var list    = $( '#breakfast-menu' );
+			var firstLI = list.find( 'li' ).first();
+			list
 				.iosMenu()
-				.bind('menuselect', function( event, ui ) {
-					$('#log').append('<li>' + $(ui.item).text() + '</li>');
+				.focus()
+				.menu( 'focus', {}, firstLI )
+				.bind( 'menuselect', function( event, ui ) {
+					$('#log').append( '<li>' + $(ui.item).text() + '</li>' );
 				});
 		});
 	</script>
