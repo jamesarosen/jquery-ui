@@ -107,6 +107,11 @@
 				menu._startOpening = function() {
 					clearTimeout( this.timer );
 				}
+			},
+
+			destroy: function() {
+			  var menu = this.element && this.element.data( 'menu' );
+				menu && menu.destroy();
 			}
 		});
 
