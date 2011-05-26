@@ -75,6 +75,7 @@
 							self		= this,
 							parent;
 					if ( newItem && newItem.length ) {
+					  newItem.find( '> a' ).addClass( 'ui-state-focus' ).removeClass( 'ui-state-active' );
 						parent = this.active.parent();
 						parent
 							.attr( 'aria-hidden', 'true' )
